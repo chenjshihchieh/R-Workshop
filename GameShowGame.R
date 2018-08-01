@@ -1,7 +1,7 @@
 
 MontyHallGame <- function(SelectedDoor, Strategy){
-as.numeric(SelectedDoor)
-as.character(Strategy)
+SelectedDoor <- as.numeric(SelectedDoor)
+Strategy <- as.character(Strategy)
 
 Items <- sample(c("Car", "Empty", "Empty"), 3)
 Door <- c(1, 2, 3)
