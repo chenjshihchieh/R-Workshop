@@ -1,7 +1,13 @@
 
-MontyHallGame <- function(SelectedDoor, Strategy){
-SelectedDoor <- as.numeric(SelectedDoor)
-Strategy <- as.character(Strategy)
+MontyHallGame <- function(Pick, Approach){
+if(Approach == "Stay"|Approach == "stay"){
+  Strategy <- "Stay"
+}else{
+  Strategy <- "Switch"
+}
+
+  SelectedDoor <- as.numeric(Pick)
+
 
 Items <- sample(c("Car", "Empty", "Empty"), 3)
 Door <- c(1, 2, 3)
