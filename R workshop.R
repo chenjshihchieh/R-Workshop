@@ -34,7 +34,12 @@ Y / 2
 #You can assign multiple values to a variable
 x <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
-#Strings
-"characters"
+#The variable can be any name as long as the name does not contain a space.
+#Common replacements are "_" and "."
+
+#In addition to numeric values, you can also store strings
+spider_size <- c("Small", "Small", "small", "small", "Big", "Big", "Big", "Big")
+
+#
 
 
