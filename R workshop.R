@@ -43,9 +43,11 @@ x <- 1, 2, 3, 4, 5, 6, 7, 8, 9
 x <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 #The variable can be any name as long as the name does not contain a space.
-#Common replacements are "_" and "."
+#Common replacements are "_", "." and capitilizing the next word
 
-sequence_of_number <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+sequence_number <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+sequence.number <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+sequenceNumber <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 #Is there an easier way to generate a list of numbers? Google!
 #Generate a list of numbers from 1 to 50
@@ -63,14 +65,45 @@ condition <- c("Control", "Control", "Control", "Experimental", "Experimental", 
 help(rep)
 ?rep
 
-#Use function to generate the condition variable
+#Use functions to generate the condition variable
 
+
+###########################################################################
+###########################################################################
+#You can also have Logical values in the forms of TRUE and FALSE
+#Logical value can also be stored like others
+logic <- TRUE
+logic2 <- FALSE
+logicVector <- c(TRUE, FALSE, TRUE)
 
 ###########################################################################
 ###########################################################################
 #You can also reference any object in variables using square brackets, []
-sequence_of_number[5]
-condition[3]
+sequenceNumber[5]
+condition[2]
 condition[4]
 
-#You can also have Logical values in the forms of TRUE and FALSE
+#What happens in these cases?
+condition[1 + 1]
+condition[8/2]
+condition[2, 4]
+condition[c(2, 4)]
+
+#You can also use logic values
+sequenceNumber[TRUE]
+sequenceNumber[FALSE]
+sequenceNumber[c(TRUE, FALSE)]
+sequenceNumber[c(TRUE, FALSE, TRUE)]
+sequenceNumber[logicVector]
+
+
+###########################################################################
+###########################################################################
+#A variable with a list of objects is only one dimensionl
+#Use data frames to create a 2 dimensional chart
+#First, create some data using rnorm()
+data <- rnorm(n= 50, mean = 10, sd = 2)
+condition <- c(rep("Control", 25), rep("Experimental", 25))
+
+#combine the 2  1 dimensional data
+df <- data.frame(data, condition)
