@@ -96,14 +96,41 @@ sequenceNumber[c(TRUE, FALSE)]
 sequenceNumber[c(TRUE, FALSE, TRUE)]
 sequenceNumber[logicVector]
 
-
 ###########################################################################
 ###########################################################################
 #A variable with a list of objects is only one dimensionl
 #Use data frames to create a 2 dimensional chart
 #First, create some data using rnorm()
-data <- rnorm(n= 50, mean = 10, sd = 2)
-condition <- c(rep("Control", 25), rep("Experimental", 25))
+Control <- rnorm(n= 50, mean = 10, sd = 2)
+#We can test to see if this is correct
+mean(Control)
+sd(Control)
 
-#combine the 2  1 dimensional data
-df <- data.frame(data, condition)
+Experimental <- rnorm(n=50, mean = 20, sd = 3)
+#We can test to see if this is correct
+mean(Experimental)
+sd(Experimental)
+
+#You can graph out each variable to see if they are truely normal
+hist(Control)
+hist(Experimental)
+
+#combine the 2  one-dimensional data
+#Don't forget to save it to a variable because R won't do it automatically
+df <- data.frame(Control, Experimental)
+
+#typing in the variable you used will call out your data frame
+df
+
+#Other ways to look at your data
+head()
+tail()
+str()
+summary()
+
+#Lets run a t-test to see if the control differ from exerimental
+t.test(df)
+
+###########################################################################
+###########################################################################
+
