@@ -1,7 +1,9 @@
 ##Starting R
-#You can interact with R through the Console or in the script
-#Console automatically runs the code
-#Script requires you to press "Run" or ctrl + Enter
+#R is a programming language that allows a computer to take inputs, make calculations, and generate outputs
+#You can interact with R through the Console or in the script by entering code into them
+#Console automatically runs the code when you press enter
+#Script requires you to press "Run" or ctrl + Enter on selected lines of code
+#R takes objects and generate outputs base on functions and/or operators
 1 + 1
 
 2 - 1
@@ -20,25 +22,31 @@ sqrt(25)
 #R follows BEDMAS/PEMDAS
 
 #IMPORTANT: R does not save your work unless prompted to
-#"<-" allows you to save values by assigning it a variable
+#"<-" allows you to save any object by assigning it a variable
 a <- 2
 
-#You can then call back those values by typing in the variable
+#You can then call back those objects by typing in the variable
 a
 
 #R also saves the result of a computation
+#R FIRST does the computation THEN assign the resulting object to a variable
 x <- 1 + 1
-
+result1 <- 2 * 3
+result2 <- 6/2
 
 #Those variables will take on the property of the assigned values
 #In this case, the property of the values are numerical
 x - 1
-y <- x * 3
-y / 2
+y <- result1 / x
+y * result2
 
-#You can assign multiple values to a variable
-#However, that requires a function, c()
+#You can only assign a single object to a variable
+#However, that isen't very useful but functions can help
+
+###########################################################################
+###########################################################################
 #All function takes the form of FunctionName()
+#c() allows us to concatenate a list of objects into one object
 x <- 1, 2, 3, 4, 5, 6, 7, 8, 9
 x <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
@@ -50,22 +58,41 @@ sequence.number <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
 sequenceNumber <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 #Is there an easier way to generate a list of numbers? Google!
-#Generate a list of numbers from 1 to 50
+#Generate a list of numbers from 1 to 50 and assign it to a variable
+
+###########################################################################
+###########################################################################
+#Each object in your list is given a number
+#You can reference any object in variables with square brackets, [], by referencing those numbers
+sequenceNumber[5]
+sequenceNumber[2]
+sequenceNumber[4]
+
+#What happens in these cases?
+sequenceNumber[1 + 1]
+sequenceNumber[8/2]
+sequenceNumber[2, 4]
+sequenceNumber[c(2, 4)]
+
+#Try to reference all odd/even number objects
+
+
 
 
 ###########################################################################
 ###########################################################################
-
-#In addition to numeric values, you can also store strings (aka characters)
-example <- c("Apple", "Orange", " ", "1", "2")
+#In addition to numeric values, there are also strings (aka characters)
+#example <- c("Apple", "Orange", " ", "1", "2") 
 condition <- c("Control", "Control", "Control", "Experimental", "Experimental", "Experimental")
 
-#Using the repeat function, rep()
+#Making this process easier Using the repeat function, rep()
 #using help() or ? to find out how to use the function
 help(rep)
 ?rep
 
-#Use functions to generate the condition variable
+#Generate a list of conditions containing 25 "Control" and 25 "Experimental" and assign it a variable
+
+#
 
 
 ###########################################################################
@@ -76,25 +103,8 @@ logic <- TRUE
 logic2 <- FALSE
 logicVector <- c(TRUE, FALSE, TRUE)
 
-###########################################################################
-###########################################################################
-#You can also reference any object in variables using square brackets, []
-sequenceNumber[5]
-condition[2]
-condition[4]
+#You can use various logical operator 
 
-#What happens in these cases?
-condition[1 + 1]
-condition[8/2]
-condition[2, 4]
-condition[c(2, 4)]
-
-#You can also use logic values
-sequenceNumber[TRUE]
-sequenceNumber[FALSE]
-sequenceNumber[c(TRUE, FALSE)]
-sequenceNumber[c(TRUE, FALSE, TRUE)]
-sequenceNumber[logicVector]
 
 ###########################################################################
 ###########################################################################
