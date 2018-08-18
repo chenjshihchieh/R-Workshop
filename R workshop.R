@@ -1,21 +1,26 @@
-##Starting R
-#R is a programming language that allows a computer to take inputs, make calculations, and generate outputs
-#You can interact with R through the Console or in the script by entering code into them
 #Console automatically runs the code when you press enter
 #Script requires you to press "Run" or ctrl + Enter on selected lines of code
-#R takes objects and generate outputs base on functions and/or operators
-1 + 1
+#R takes objects and generate output(s)
 
+#R Consists of objects and actions
+#2 main syntactical structure
+## Object Action Object (e.g., two plus two)
+##Action(Object)
+
+##Example: Taking numbers and applying numeric operators
+#Add and subtract
+1 + 1
 2 - 1
 
-#Multiply (*) and divide (/)
+#To multiply
 2 * 3
 
+#To divide
 6 / 2
 
 #Squaring numbers (^)
 2 ^ 3
-
+ 
 #Square roots
 sqrt(25)
 
@@ -45,7 +50,7 @@ y * result2
 
 ###########################################################################
 ###########################################################################
-#All function takes the form of FunctionName()
+#Notice the syntactical form Action(Object)
 #c() allows us to concatenate a list of objects into one object
 number <- 1, 2, 3, 4, 5, 6, 7, 8, 9
 number <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
@@ -83,7 +88,7 @@ number[c(2, 4)]
 ###########################################################################
 #You can also have Logical values in the forms of TRUE and FALSE
 #You can use various logical operator 
-# (>, <, >=, <=, ==, =/=)
+# (>, <, >=, <=, ==, !=)
 5 > 3
 5 < 3
 
@@ -159,4 +164,15 @@ t.test(df)
 
 ###########################################################################
 ###########################################################################
+###Analyses by developing linear models
+#Lets start by loading the PlantGrowth data
+data <- PlantGrowth
 
+#We can look at the structure of the data
+summary(data)
+str(data)
+
+#y = mX + b
+#This fomula can be reflected in R as well
+#y ~ var1 + 1; The 1 represents the intercept but can be removed from the formula
+model <- 

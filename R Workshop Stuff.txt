@@ -1,7 +1,24 @@
 ###Important Concepts
+#R is a programming language that allows a computer to take inputs, make calculations, and generate outputs
+
 The language consists of objects and actions
 There are two main syntaxes in R that underlie all R codes
 - Object Action Object-(e.g., two plus two)
 - Action(Object)-(e.g., stack(Bun, Lettuce, Tomato, Cheese, Beef Patty, Bun))
 
 The rest is learning different types of objects and actions
+
+##Object Action Object with Numerical Objects
+ 5 + 5
+
+(5 + 5) + 15
+
+##Action(Object)
+sqrt(25)
+
+sqrt(25) + 20
+
+sqrt(sqrt(25) + 20)
+
+Reminders:
+Write on whiteboard: Object Action Object and Action(Object)
