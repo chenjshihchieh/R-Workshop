@@ -205,7 +205,6 @@ sink() #this will save all your output into a text file
 
 getwd() #will tell you where all your files are saved
 
-
 read.csv("MyData.csv", header = TRUE) #will read your data 
 #R will look for "MyData.csv" at getwd()
 #To read data from a different directory, you need to enter the full address
