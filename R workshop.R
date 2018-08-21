@@ -47,13 +47,15 @@ y <- result1 / x
 y * result2
 
 #You can only assign a single object to a variable
+number <- 1 #a valid line of code
+number <- 1, 2, 3, 4, 5, 6, 7, 8, 9 #not a valid line of code
+
 #However, that isen't very useful but functions can help
 
 ###########################################################################
 ###########################################################################
 #c() allows us to concatenate a list of objects into one object
 #Notice the syntactical form Action(Object)
-number <- 1, 2, 3, 4, 5, 6, 7, 8, 9
 number <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 #The variable can be any name as long as the name does not contain a space.
@@ -65,6 +67,7 @@ sequenceNumber <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 #Is there an easier way to generate a list of numbers? Google!
 #Generate a list of numbers from 1 to 50 and assign it to a variable
+
 
 
 ###########################################################################
