@@ -4,67 +4,90 @@
 
 #R Consists of objects and actions
 #2 main syntactical structure
-## Object Action Object (e.g., two plus two)
-##Action(Object)
+## Object Action Object; (e.g., two plus two)
+##Action(Object); (e.g., sqrt(25))
 
 ##Example: Taking numbers and applying numeric operators
 #Notice the form Object Action Object
-#Add and subtract
+
+#Try a few calculations
+#2 + 4
+#8 + 12
+
+#There are many arithmetic operators in R
+#Addition
 1 + 1
+
+#Subtraction
 2 - 1
 
-#To multiply
+#Multiplication
 2 * 3
 
-#To divide
-6 / 2
+#Division
+(3 + 3) / 2
 
-#Squaring numbers (^)
+#Exponentiation
 2 ^ 3
- 
-#Square roots
-sqrt(25)
-
-#R follows BEDMAS/PEMDAS
 
 #IMPORTANT: R does not save your work unless prompted to
-#"<-" allows you to save any object by assigning it a variable
-a <- 2
+x <- 2 #This allows you to assign 2 to a variable. You will use this often
 
 #You can then call back those objects by typing in the variable
-a
+x
 
-#R also saves the result of a computation
-#R FIRST does the computation THEN assign the resulting object to a variable
-x <- 1 + 1
-result1 <- 2 * 3
-result2 <- 6/2
+#Assign a value to my_apples
 
-#Those variables will take on the property of the assigned values
-#In this case, the property of the values are numerical
-x - 1
-y <- result1 / x
-y * result2
 
-#You can only assign a single object to a variable
-#However, that isen't very useful but functions can help
+#Call back the variable, my_apples
+
+
+#Assign a value to my_oranges
+
+
+#Add the two variables together
+
+
+#Create the variable, my_fruit, then call back the variable
+
 
 ###########################################################################
 ###########################################################################
-#c() allows us to concatenate a list of objects into one object
-#Notice the syntactical form Action(Object)
-number <- 1, 2, 3, 4, 5, 6, 7, 8, 9
-number <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+#R works with many different data types, some basic types to know are:
+#decimal values are called numerics
+4.5
 
-#The variable can be any name as long as the name does not contain a space.
-#Common replacements are "_", "." and capitilizing the next word
+#Boolean values (TRUE, FALSE) are called logical
+TRUE
+FALSE
 
-sequence_number <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
-sequence.number <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
-sequenceNumber <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+#Texts, or strings, values are called characters
+"this is a string"
 
-#Is there an easier way to generate a list of numbers? Google!
-#Generate a list of numbers from 1 to 50 and assign it to a variable
+#Assign a number to a variable called a_numeric
+
+#Assign a boolean value to a variable called a_logical
+
+#Assign a text value to a variable called a_character
+
+#You can check your work with the function class()
+#Notice the form Action(Object)
+
+
+#NOTE: these objects are also known as "Elements". They are the smallest form of objects in R
+
+###########################################################################
+###########################################################################
+#Lets talk about a new object called vectors
+#Vectors are one-dimensional arrays that that consists of multiple elements of a single data type
+#c() allows us to combine elements to create vectors
+numeric_vector <- c(1, 2, 3)
+character_vector <- c("a", "b", "c")
+
+#Try creating a boolean vector (TRUE, FALSE)
+
+
+
 
 
 ###########################################################################
