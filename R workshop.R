@@ -1,234 +1,313 @@
-#Console automatically runs the code when you press enter
-#Script requires you to press "Run" or ctrl + Enter on selected lines of code
-#R takes objects and generate output(s)
+# Console automatically runs the code when you press enter
+# Script requires you to press "Run" or ctrl + Enter on selected lines of code
+# R takes objects and generate output(s)
 
-#R Consists of objects and actions
-#2 main syntactical structure
+# R Consists of objects and actions
+# 2 main syntactical structure
 ## Object Action Object; (e.g., two plus two)
-##Action(Object); (e.g., sqrt(25))
+## Action(Object); (e.g., sqrt(25))
 
-##Example: Taking numbers and applying numeric operators
-#Notice the form Object Action Object
+## Example: Taking numbers and applying numeric operators
+# Notice the form Object Action Object
 
-#Try a few calculations
-#2 + 4
-#8 + 12
+# Try a few calculations
+# 2 + 4
+# 8 + 12
 
-#There are many arithmetic operators in R
-#Addition
+# There are many arithmetic operators in R
+# Addition
 1 + 1
 
-#Subtraction
+# Subtraction
 2 - 1
 
-#Multiplication
+# Multiplication
 2 * 3
 
-#Division
+# Division
 (3 + 3) / 2
 
-#Exponentiation
+# Exponentiation
 2 ^ 3
 
-#IMPORTANT: R does not save your work unless prompted to
+# IMPORTANT: R does not save your work unless prompted to
 x <- 2 #This allows you to assign 2 to a variable. You will use this often
 
-#You can then call back those objects by typing in the variable
+# You can then call back those objects by typing in the variable
 x
 
-#Assign a value to my_apples
+# Assign a value to my_apples
 
 
-#Call back the variable, my_apples
+# Call back the variable, my_apples
 
 
-#Assign a value to my_oranges
+# Assign a value to my_oranges
 
 
-#Add the two variables together
+# Add the two variables together
 
 
-#Create the variable, my_fruit, then call back the variable
+# Create the variable, my_fruit, then call back the variable
 
 
 ###########################################################################
 ###########################################################################
-#R works with many different data types, some basic types to know are:
-#decimal values are called numerics
+# R works with many different data types, some basic types to know are:
+# decimal values are called numerics
 4.5
 
-#Boolean values (TRUE, FALSE) are called logical
+# Boolean values (TRUE, FALSE) are called logical
 TRUE
 FALSE
 
-#Texts, or strings, values are called characters
+# Texts, or strings, values are called characters
 "this is a string"
 
-#Assign a number to a variable called a_numeric
+# Assign a number to a variable called a_numeric
 
-#Assign a boolean value to a variable called a_logical
+# Assign a boolean value to a variable called a_logical
 
-#Assign a text value to a variable called a_character
+# Assign a text value to a variable called a_character
 
-#You can check your work with the function class()
-#Notice the form Action(Object)
+# You can check your work with the function class()
+# Notice the form Action(Object)
 
 
-#NOTE: these objects are also known as "Elements". They are the smallest form of objects in R
+# NOTE: these objects are also known as "Elements". They are the smallest form of objects in R
+
 
 ###########################################################################
 ###########################################################################
-#Lets talk about a new object called vectors
-#Vectors are one-dimensional arrays that that consists of multiple elements of a single data type
-#c() allows us to combine elements to create vectors
+# Lets talk about a new object called vectors
+# Vectors are one-dimensional arrays that that consists of multiple elements of a single data type
+# c() allows us to combine elements to create vectors
 numeric_vector <- c(1, 2, 3)
 character_vector <- c("a", "b", "c")
 
-#Try creating a boolean vector (TRUE, FALSE)
-
-
-
-###########################################################################
-###########################################################################
-#Each object in your list is given a number
-#You can extract any object in variables with square brackets, [], by referencing those numbers
-number[5]
-number[2]
-number[4]
-
-#What happens in these cases?
-number[1 + 1]
-number[8/2]
-number[2, 4]
-number[c(2, 4)]
-
-#Try to reference all odd/even number objects
+# Try creating a boolean vector (TRUE, FALSE)
 
 
 ###########################################################################
 ###########################################################################
-#You can also have Logical values in the forms of TRUE and FALSE
-#You can use various logical operator 
-# (>, <, >=, <=, ==, !=)
-5 > 3
-5 < 3
-
-#the operators also apply to variables
-x <- 2
-x == 2
-x > 3
-example <- c(seq(1, 4))
-example < 3
-example == 3
-
-#you can use logicals to index a variable
-example[c(TRUE, TRUE, FALSE, FALSE)]
-example[c(TRUE, FALSE)]
-example[example < 3]
-example[example == 3]
+# Pie sales from Monday to Friday
 
 
+# Cake sales from Monday to Friday
 
-###########################################################################
-###########################################################################
-#In addition to numeric values, there are also strings (aka characters)
-fruits <- c("Apple", "Orange", "Banana", "Pineapple", "Watermelon", "Kiwi")
-#You can also referece strings
-fruits[4]
 
-#sample()
-fruits.data <- sample(fruits, 10, replace = TRUE)
-#how many "watermelon" are in the sample?
-fruits.data[fruits.data == "Watermelon"]
+# Assign days as names of pie_vector, names()
 
-#Generate a list containing 10 of each fruit
-#Making this process easier Using rep()
-#using help() or ? to find out how to use the function
-help(rep)
-?rep
+
+# Assign days as names of cake_vector, names()
+
+
+# Assign days to a variable to save time
+
+
+# Let's find out how much you earn for each of these products
+cake_total <-sum()
+pie_total <-sum()
+
+# What is your total earning for the week?
+total_earnings <- 
+
+# Which sells better, cake or pie? 
 
 
 ###########################################################################
 ###########################################################################
-#Generating a data with normal distribution
-#Create some data using rnorm()
-control <- rnorm(n= 50, mean = 10, sd = 2)
-#We can test to see if this is correct
-mean(control)
-sd(control)
+# Lets investigate whether the beginning of the working week is better than the end
+# We can do this by extracting certain elements from a vector using []
+total_earnings[1]
+total_earnings[3]
+total_earnings_monday <- total_earnings[1]
+total_earnings_wednesday <- total_earnings[3]
 
-experimental <- rnorm(n=50, mean = 20, sd = 3)
-#We can test to see if this is correct
-mean(experimental)
-sd(experimental)
+# we can make this interesting
+total_earnings[(3+3)/6]
+total_earnings[2 + 1]
 
-#You can graph out each variable to see if they are truely normal
-hist(control)
-hist(experimental)
+# Lets try analyzing our midweek sales for cakes
+# using c() in the [], you can referece multiple elements in a vector
+pie_midweek_sales <- pie_sales[c(2, 3, 4)]
 
-#You can also plot a graph with control and experimental values
-plot(control, experimental)
+# Lets try analyzing our midweek sales for pies
+# c(2, 3, 4) can be abbreviated as 2:4
+cake_midweek_sales <- cake_sales[2:4]
+
+# select earnings for pies on Monday, Tuesday, and Wednesday
+pie_start <- 
+
+# lets calculate the average of the elements from pie_start
+
+  
+# select earnings for cakes on Monday, Tuesday, and Wednesday
+
 
 ###########################################################################
 ###########################################################################
-#A variable with a list of objects is only one dimensionl
-control
-experimental
+# lets find the average sales of cakes
 
-#combine the 2  one-dimensional data
-#Use data frames to create a 2 dimensional chart
-#Don't forget to save it to a variable because R won't do it automatically
-df <- data.frame(value, condition)
 
-#typing in the variable you used will call out your data frame
-df
+# On what days are the sales better than average? 
+selection_vector <- 
+  
+# print out selection_vector
 
-#Other ways to look at your data
+
+# Using these logicals, you can select the days where you sales are better than average\
+# Do this by putting the selection_vector in the []
+
+
+# Try doing this for the pie sales
+# What is the average sales of pies?
+  
+
+# find the days when pie sales are above average and print out the values
+
+
+###########################################################################
+###########################################################################
+# Lets look at the data frame, mtcars, that was built into R
+
+
+# This is a lot of data to look at and may be better to look at smaller portion at a time
+# You can do that using these functions
 head()
 tail()
 str()
-summary()
 
-#You can also reference specific elements of your data frame using the square brackets
-#nameofdf[row, column]
-df[2, 1] #references a value from second row of the first column
-df[1] #references values from the first column
-df$control #references values from the column named "value"
+# Definition of vectors
+name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# I've defined the vectors
+# Use them to create a data frame using data.frame
+planets_df <-data.frame()
+
+# Lets look at the structure of the data frame
+
+
+# Like vectors, we can also call specific elements using []
+# for example, if I want to print out the type of planet for earch (row 3, column 2)
+planets_df[3, 2]
+
+# I can also print out the entire row for earth (row 3)
+planets_df[3,]
+
+
+# Print out diameter of Mercury (row 1, column 3)
+planets_df[,]
+
+# Print out data for Mars (entire fourth row)
+planets_df[,]
+
+# You can also select multiple rows or multiple columns, my_df[1:3, 1:2]
+# for example, I want to print the first seven values from the first column, "name"
+planets_df[1:7, 1]
+
+# You can also specify columns by their column names
+planets_df[1:7, "name"]
+           
+           ]
+# Select the first 5 values of diameter column
+planets_df[,]
+
+
+# You can also select entire columns
+# for example, you can select the entire "diameter" column from planets_df
+planets_df[,3]
+planets_df[,"diameter"]
+
+# alternatively, you can use the $ symbol
+planets_df$diameter
+
+# Select the rings variable from planets_df
+
+
+# Print out rings_vector
+
 
 ###########################################################################
 ###########################################################################
+# Lets create a vector, create a data frame, and run statistical analysis on our data frame
+# There will be a lot of new functions. use ? or help() to help learn the new functions
+#For example, rnorm()
+?rnorm
+help(rnorm)
+
+
+
+# Create a vector called "control" using rnorm
+#parameters: 50 variables with mean of 25 and standard deviation of 3
+control <- rnorm(n= 50, mean = 25, sd = 3)
+# We can test to see if this is correct
+mean(control)
+sd(control)
+
+# create a vector called "experimental"
+# Parameters: 50 variabels with mean of 35 and standard deviation of 3
+
+
+# test to see if they are correct
+
+
+# Graph them using hist()
+
+
+# Make a data frame contain the vectors "control" and "experimental
+
+
 #Lets run a t-test to see if the control differ from experimental
-t.test(df)
+t.test()
 
-###Analyses by developing linear models
-#Lets start by loading the PlantGrowth data that comes with R
+###########################################################################
+###########################################################################
+# Lets take a look at another data set
+# Lets start by loading the PlantGrowth data that comes with R
 data <- PlantGrowth
 
-#We can look at the structure of the data
-summary(data)
-str(data)
+# Using str() and head(), lets get an idea of the layout of the data
 
-#linear models takes the form of y = mX + b
-#This fomula can be reflected in R as well
-#dependant variable ~ independent variable
+
+# In R, we can develop linear models and test them
+# linear models takes the form of y = mX + b
+# This fomula can be reflected in R as well
+# dependant variable ~ independent variable
 newmodel <- lm(weight ~ group, data = data) #this creates the linear model
 analysis <- summary(newmodel) #summary allows you to look at tit's results
 plot(newmodel) #we can look at a number of relating plots
+
+
 ###########################################################################
 ###########################################################################
-#After all this, how do you save your work?
+# After all this, how do you save your work?
 write.csv(data, file = "MyData.csv")
 
-#To save yoru output from your analyses
+# To save your output from your analyses
 sink("MyResults.txt") #in quotation marks, enter the name of your file ending in .txt
+
 analysis #print out your data here
+
 sink() #this will save all your output into a text file
+
+
 
 getwd() #will tell you where all your files are saved
 
 read.csv("MyData.csv", header = TRUE) #will read your data 
-#R will look for "MyData.csv" at getwd()
-#To read data from a different directory, you need to enter the full address
+
+
+# R will look for "MyData.csv" at getwd()
+# To read data from a different directory, you need to enter the full address
 read.csv("C:\Users\SC\Documents\Git\MyData.csv", header = TRUE)
-#Dont forget to save it to a variable for easier recall
+
+
+# Dont forget to save it to a variable for easier recall
 ImportedData <- read.csv("MyData.csv", header = TRUE)
+
