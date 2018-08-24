@@ -263,7 +263,7 @@ sd(control)
 # Make a data frame contain the vectors "control" and "experimental
 
 
-#Lets run a t-test to see if the control differ from experimental
+# Lets run a t-test to see if the control differ from experimental
 t.test()
 
 ###########################################################################
@@ -279,9 +279,9 @@ data <- PlantGrowth
 # linear models takes the form of y = mX + b
 # This fomula can be reflected in R as well
 # dependant variable ~ independent variable
-newmodel <- lm(weight ~ group, data = data) #this creates the linear model
-analysis <- summary(newmodel) #summary allows you to look at tit's results
-plot(newmodel) #we can look at a number of relating plots
+newmodel <- lm(weight ~ group, data = data) # this creates the linear model
+analysis <- summary(newmodel) # summary allows you to look at tit's results
+plot(newmodel) # we can look at a number of relating plots
 
 
 ###########################################################################
@@ -290,17 +290,17 @@ plot(newmodel) #we can look at a number of relating plots
 write.csv(data, file = "MyData.csv")
 
 # To save your output from your analyses
-sink("MyResults.txt") #in quotation marks, enter the name of your file ending in .txt
+sink("MyResults.txt") # in quotation marks, enter the name of your file ending in .txt
 
-analysis #print out your data here
+analysis # print out your data here
 
-sink() #this will save all your output into a text file
+sink() # this will save all your output into a text file
 
 
 
-getwd() #will tell you where all your files are saved
+getwd() # will tell you where all your files are saved
 
-read.csv("MyData.csv", header = TRUE) #will read your data 
+read.csv("MyData.csv", header = TRUE) # will read your data 
 
 
 # R will look for "MyData.csv" at getwd()
